@@ -2,31 +2,45 @@
 //  FileSelectionView.swift
 //  CSVReader
 //
-//  Created by Andrés Pesate on 11/06/2020.
+//  Created by Andrés Pesate on 12/06/2020.
 //  Copyright © 2020 Pesate. All rights reserved.
 //
 
-import SwiftUI
+import UIKit
 
-struct FileSelectionView: View {
+final class FileSelectionView: UIView {
 
-	@ObservedObject private var viewModel = FileSelectionViewModel()
+	let tableView = UITableView(frame: .zero, style: .grouped)
 
-	init(viewModel: FileSelectionViewModel = .init()) {
-		self.viewModel = viewModel
-		viewModel.loadData()
+	init() {
+		super.init(frame: .zero)
+
+		setupComponents()
+		setupConstraints()
 	}
 
-	var body: some View {
-		List(viewModel.dataSource) { file in
-			Text(file)
-		}
+	@available(*, unavailable)
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
 	}
-	
-}
 
-struct FileSelectionView_Previews: PreviewProvider {
-	static var previews: some View {
-		FileSelectionView()
+	// MARK: Interface
+
+	// MARK: Private
+
+	private func setupComponents() {
+		addSubview(tableView)
 	}
+
+	private func setupConstraints() {
+		tableView.translatesAutoresizingMaskIntoConstraints = false
+
+		NSLayoutConstraint.activate([
+			tableView.topAnchor.constraint(equalTo: topAnchor),
+			tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+			trailingAnchor.constraint(equalTo: tableView.trailingAnchor),
+			bottomAnchor.constraint(equalTo: tableView.bottomAnchor),
+		])
+	}
+
 }

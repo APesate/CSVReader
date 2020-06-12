@@ -1,0 +1,787 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE6BBB8B2491608600CDBBE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BBB8A2491608600CDBBE5 /* AppDelegate.swift */; };
+		FE6BBB8D2491608600CDBBE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BBB8C2491608600CDBBE5 /* SceneDelegate.swift */; };
+		FE6BBB942491608700CDBBE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE6BBB932491608700CDBBE5 /* Assets.xcassets */; };
+		FE6BBB972491608700CDBBE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6BBB952491608700CDBBE5 /* LaunchScreen.storyboard */; };
+		FE6BBBA22491608700CDBBE5 /* CSVReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BBBA12491608700CDBBE5 /* CSVReaderTests.swift */; };
+		FE6BBBAD2491608700CDBBE5 /* CSVReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BBBAC2491608700CDBBE5 /* CSVReaderUITests.swift */; };
+		FE6BBBBD2491613A00CDBBE5 /* CSVReaderCore in Frameworks */ = {isa = PBXBuildFile; productRef = FE6BBBBC2491613A00CDBBE5 /* CSVReaderCore */; };
+		FE6BBC0D24917AE700CDBBE5 /* FileSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BBC0C24917AE700CDBBE5 /* FileSelectionViewModel.swift */; };
+		FE6BBC0F24917B0D00CDBBE5 /* ContentDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BBC0E24917B0D00CDBBE5 /* ContentDisplayView.swift */; };
+		FE6BBC1124917B1600CDBBE5 /* ContentDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BBC1024917B1600CDBBE5 /* ContentDisplayViewController.swift */; };
+		FE6BBC1324917B1C00CDBBE5 /* ContentDisplayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BBC1224917B1C00CDBBE5 /* ContentDisplayViewModel.swift */; };
+		FED53B02249417DB00447A5A /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = FEA9CF8C2492C0F9007C1FBA /* issues.csv */; };
+		FED53B03249417E400447A5A /* Teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = FED53AF82492E11D00447A5A /* Teams.csv */; };
+		FED53B0F249420CF00447A5A /* FileSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED53B0E249420CF00447A5A /* FileSelectionView.swift */; };
+		FED53B11249420D500447A5A /* FileSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED53B10249420D500447A5A /* FileSelectionViewController.swift */; };
+		FED53B14249421F100447A5A /* FileSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED53B13249421F100447A5A /* FileSelectionTableViewCell.swift */; };
+		FED53B172494227200447A5A /* FileSelectionDesignGuidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED53B162494227200447A5A /* FileSelectionDesignGuidelines.swift */; };
+		FEE105EB249431F700582720 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105EA249431F700582720 /* NavigationController.swift */; };
+		FEE105EE2494330C00582720 /* Titleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105ED2494330C00582720 /* Titleable.swift */; };
+		FEE105F02494359100582720 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105EF2494359100582720 /* ViewProtocol.swift */; };
+		FEE105F3249435A900582720 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105F2249435A900582720 /* ViewModelProtocol.swift */; };
+		FEE105F7249436C300582720 /* ViewProtocol+Titleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105F6249436C300582720 /* ViewProtocol+Titleable.swift */; };
+		FEE34D512494265A00C0C45A /* CommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = FEE34D502494265A00C0C45A /* CommonUI */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE6BBB9E2491608700CDBBE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE6BBB7F2491608600CDBBE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE6BBB862491608600CDBBE5;
+			remoteInfo = CSVReader;
+		};
+		FE6BBBA92491608700CDBBE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE6BBB7F2491608600CDBBE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE6BBB862491608600CDBBE5;
+			remoteInfo = CSVReader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FE6BBB872491608600CDBBE5 /* CSVReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSVReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE6BBB8A2491608600CDBBE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FE6BBB8C2491608600CDBBE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FE6BBB932491608700CDBBE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE6BBB962491608700CDBBE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE6BBB982491608700CDBBE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE6BBB9D2491608700CDBBE5 /* CSVReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSVReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE6BBBA12491608700CDBBE5 /* CSVReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVReaderTests.swift; sourceTree = "<group>"; };
+		FE6BBBA32491608700CDBBE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE6BBBA82491608700CDBBE5 /* CSVReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSVReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE6BBBAC2491608700CDBBE5 /* CSVReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVReaderUITests.swift; sourceTree = "<group>"; };
+		FE6BBBAE2491608700CDBBE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE6BBBBA249160E300CDBBE5 /* CSVReaderCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CSVReaderCore; path = ../Packages/CSVReaderCore; sourceTree = SOURCE_ROOT; };
+		FE6BBC0C24917AE700CDBBE5 /* FileSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectionViewModel.swift; sourceTree = "<group>"; };
+		FE6BBC0E24917B0D00CDBBE5 /* ContentDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDisplayView.swift; sourceTree = "<group>"; };
+		FE6BBC1024917B1600CDBBE5 /* ContentDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDisplayViewController.swift; sourceTree = "<group>"; };
+		FE6BBC1224917B1C00CDBBE5 /* ContentDisplayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDisplayViewModel.swift; sourceTree = "<group>"; };
+		FEA9CF8C2492C0F9007C1FBA /* issues.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issues.csv; sourceTree = "<group>"; };
+		FED53AF82492E11D00447A5A /* Teams.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Teams.csv; sourceTree = "<group>"; };
+		FED53B0E249420CF00447A5A /* FileSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectionView.swift; sourceTree = "<group>"; };
+		FED53B10249420D500447A5A /* FileSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectionViewController.swift; sourceTree = "<group>"; };
+		FED53B13249421F100447A5A /* FileSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		FED53B162494227200447A5A /* FileSelectionDesignGuidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectionDesignGuidelines.swift; sourceTree = "<group>"; };
+		FEE105EA249431F700582720 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		FEE105ED2494330C00582720 /* Titleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Titleable.swift; sourceTree = "<group>"; };
+		FEE105EF2494359100582720 /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
+		FEE105F2249435A900582720 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		FEE105F6249436C300582720 /* ViewProtocol+Titleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewProtocol+Titleable.swift"; sourceTree = "<group>"; };
+		FEE34D3D249424D700C0C45A /* CommonUI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CommonUI; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE6BBB842491608600CDBBE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE6BBBBD2491613A00CDBBE5 /* CSVReaderCore in Frameworks */,
+				FEE34D512494265A00C0C45A /* CommonUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE6BBB9A2491608700CDBBE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE6BBBA52491608700CDBBE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE6BBB7E2491608600CDBBE5 = {
+			isa = PBXGroup;
+			children = (
+				FE6BBBE02491708400CDBBE5 /* Packages */,
+				FE6BBB892491608600CDBBE5 /* CSVReader */,
+				FE6BBBA02491608700CDBBE5 /* CSVReaderTests */,
+				FE6BBBAB2491608700CDBBE5 /* CSVReaderUITests */,
+				FE6BBB882491608600CDBBE5 /* Products */,
+				FE6BBBBB2491613A00CDBBE5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FE6BBB882491608600CDBBE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE6BBB872491608600CDBBE5 /* CSVReader.app */,
+				FE6BBB9D2491608700CDBBE5 /* CSVReaderTests.xctest */,
+				FE6BBBA82491608700CDBBE5 /* CSVReaderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE6BBB892491608600CDBBE5 /* CSVReader */ = {
+			isa = PBXGroup;
+			children = (
+				FED53B0924941E6F00447A5A /* Common */,
+				FE6BBC012491716E00CDBBE5 /* App */,
+				FE6BBC022491717B00CDBBE5 /* Screens */,
+				FE6BBC002491713900CDBBE5 /* Supporting Files */,
+				FE6BBBFF2491712B00CDBBE5 /* Resources */,
+			);
+			path = CSVReader;
+			sourceTree = "<group>";
+		};
+		FE6BBBA02491608700CDBBE5 /* CSVReaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE6BBBA12491608700CDBBE5 /* CSVReaderTests.swift */,
+				FE6BBBA32491608700CDBBE5 /* Info.plist */,
+			);
+			path = CSVReaderTests;
+			sourceTree = "<group>";
+		};
+		FE6BBBAB2491608700CDBBE5 /* CSVReaderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FE6BBBAC2491608700CDBBE5 /* CSVReaderUITests.swift */,
+				FE6BBBAE2491608700CDBBE5 /* Info.plist */,
+			);
+			path = CSVReaderUITests;
+			sourceTree = "<group>";
+		};
+		FE6BBBBB2491613A00CDBBE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE6BBBE02491708400CDBBE5 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				FEE34D3D249424D700C0C45A /* CommonUI */,
+				FE6BBBBA249160E300CDBBE5 /* CSVReaderCore */,
+			);
+			name = Packages;
+			path = ../Packages;
+			sourceTree = "<group>";
+		};
+		FE6BBBFF2491712B00CDBBE5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FED53AF82492E11D00447A5A /* Teams.csv */,
+				FEA9CF8C2492C0F9007C1FBA /* issues.csv */,
+				FE6BBB932491608700CDBBE5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FE6BBC002491713900CDBBE5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE6BBB982491608700CDBBE5 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE6BBC012491716E00CDBBE5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FE6BBB952491608700CDBBE5 /* LaunchScreen.storyboard */,
+				FE6BBB8A2491608600CDBBE5 /* AppDelegate.swift */,
+				FE6BBB8C2491608600CDBBE5 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FE6BBC022491717B00CDBBE5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FE6BBC0924917AC100CDBBE5 /* ContentDisplay */,
+				FE6BBC0824917ABA00CDBBE5 /* FileSelection */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		FE6BBC0824917ABA00CDBBE5 /* FileSelection */ = {
+			isa = PBXGroup;
+			children = (
+				FED53B152494226500447A5A /* Design Guidelines */,
+				FED53B12249421E300447A5A /* Components */,
+				FED53B0E249420CF00447A5A /* FileSelectionView.swift */,
+				FED53B10249420D500447A5A /* FileSelectionViewController.swift */,
+				FE6BBC0C24917AE700CDBBE5 /* FileSelectionViewModel.swift */,
+			);
+			path = FileSelection;
+			sourceTree = "<group>";
+		};
+		FE6BBC0924917AC100CDBBE5 /* ContentDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				FE6BBC0E24917B0D00CDBBE5 /* ContentDisplayView.swift */,
+				FE6BBC1024917B1600CDBBE5 /* ContentDisplayViewController.swift */,
+				FE6BBC1224917B1C00CDBBE5 /* ContentDisplayViewModel.swift */,
+			);
+			path = ContentDisplay;
+			sourceTree = "<group>";
+		};
+		FED53B0924941E6F00447A5A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FEE105F82494370400582720 /* Contracts */,
+				FEE105E9249431EB00582720 /* UI */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FED53B12249421E300447A5A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FED53B13249421F100447A5A /* FileSelectionTableViewCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FED53B152494226500447A5A /* Design Guidelines */ = {
+			isa = PBXGroup;
+			children = (
+				FED53B162494227200447A5A /* FileSelectionDesignGuidelines.swift */,
+			);
+			path = "Design Guidelines";
+			sourceTree = "<group>";
+		};
+		FEE105E9249431EB00582720 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FEE105F5249436A500582720 /* View Customization */,
+				FEE105F42494369E00582720 /* Navigation */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FEE105F42494369E00582720 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FEE105EA249431F700582720 /* NavigationController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		FEE105F5249436A500582720 /* View Customization */ = {
+			isa = PBXGroup;
+			children = (
+				FEE105ED2494330C00582720 /* Titleable.swift */,
+				FEE105F6249436C300582720 /* ViewProtocol+Titleable.swift */,
+			);
+			path = "View Customization";
+			sourceTree = "<group>";
+		};
+		FEE105F82494370400582720 /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				FEE105EF2494359100582720 /* ViewProtocol.swift */,
+				FEE105F2249435A900582720 /* ViewModelProtocol.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE6BBB862491608600CDBBE5 /* CSVReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE6BBBB12491608700CDBBE5 /* Build configuration list for PBXNativeTarget "CSVReader" */;
+			buildPhases = (
+				FE6BBB832491608600CDBBE5 /* Sources */,
+				FE6BBB842491608600CDBBE5 /* Frameworks */,
+				FE6BBB852491608600CDBBE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CSVReader;
+			packageProductDependencies = (
+				FE6BBBBC2491613A00CDBBE5 /* CSVReaderCore */,
+				FEE34D502494265A00C0C45A /* CommonUI */,
+			);
+			productName = CSVReader;
+			productReference = FE6BBB872491608600CDBBE5 /* CSVReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE6BBB9C2491608700CDBBE5 /* CSVReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE6BBBB42491608700CDBBE5 /* Build configuration list for PBXNativeTarget "CSVReaderTests" */;
+			buildPhases = (
+				FE6BBB992491608700CDBBE5 /* Sources */,
+				FE6BBB9A2491608700CDBBE5 /* Frameworks */,
+				FE6BBB9B2491608700CDBBE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE6BBB9F2491608700CDBBE5 /* PBXTargetDependency */,
+			);
+			name = CSVReaderTests;
+			productName = CSVReaderTests;
+			productReference = FE6BBB9D2491608700CDBBE5 /* CSVReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FE6BBBA72491608700CDBBE5 /* CSVReaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE6BBBB72491608700CDBBE5 /* Build configuration list for PBXNativeTarget "CSVReaderUITests" */;
+			buildPhases = (
+				FE6BBBA42491608700CDBBE5 /* Sources */,
+				FE6BBBA52491608700CDBBE5 /* Frameworks */,
+				FE6BBBA62491608700CDBBE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE6BBBAA2491608700CDBBE5 /* PBXTargetDependency */,
+			);
+			name = CSVReaderUITests;
+			productName = CSVReaderUITests;
+			productReference = FE6BBBA82491608700CDBBE5 /* CSVReaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE6BBB7F2491608600CDBBE5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = Pesate;
+				TargetAttributes = {
+					FE6BBB862491608600CDBBE5 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					FE6BBB9C2491608700CDBBE5 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = FE6BBB862491608600CDBBE5;
+					};
+					FE6BBBA72491608700CDBBE5 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = FE6BBB862491608600CDBBE5;
+					};
+				};
+			};
+			buildConfigurationList = FE6BBB822491608600CDBBE5 /* Build configuration list for PBXProject "CSVReader" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE6BBB7E2491608600CDBBE5;
+			packageReferences = (
+			);
+			productRefGroup = FE6BBB882491608600CDBBE5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE6BBB862491608600CDBBE5 /* CSVReader */,
+				FE6BBB9C2491608700CDBBE5 /* CSVReaderTests */,
+				FE6BBBA72491608700CDBBE5 /* CSVReaderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE6BBB852491608600CDBBE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FED53B02249417DB00447A5A /* issues.csv in Resources */,
+				FED53B03249417E400447A5A /* Teams.csv in Resources */,
+				FE6BBB972491608700CDBBE5 /* LaunchScreen.storyboard in Resources */,
+				FE6BBB942491608700CDBBE5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE6BBB9B2491608700CDBBE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE6BBBA62491608700CDBBE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE6BBB832491608600CDBBE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEE105EE2494330C00582720 /* Titleable.swift in Sources */,
+				FEE105EB249431F700582720 /* NavigationController.swift in Sources */,
+				FE6BBB8B2491608600CDBBE5 /* AppDelegate.swift in Sources */,
+				FED53B172494227200447A5A /* FileSelectionDesignGuidelines.swift in Sources */,
+				FEE105F3249435A900582720 /* ViewModelProtocol.swift in Sources */,
+				FEE105F02494359100582720 /* ViewProtocol.swift in Sources */,
+				FED53B14249421F100447A5A /* FileSelectionTableViewCell.swift in Sources */,
+				FE6BBC0D24917AE700CDBBE5 /* FileSelectionViewModel.swift in Sources */,
+				FED53B0F249420CF00447A5A /* FileSelectionView.swift in Sources */,
+				FED53B11249420D500447A5A /* FileSelectionViewController.swift in Sources */,
+				FE6BBC0F24917B0D00CDBBE5 /* ContentDisplayView.swift in Sources */,
+				FE6BBC1124917B1600CDBBE5 /* ContentDisplayViewController.swift in Sources */,
+				FE6BBC1324917B1C00CDBBE5 /* ContentDisplayViewModel.swift in Sources */,
+				FE6BBB8D2491608600CDBBE5 /* SceneDelegate.swift in Sources */,
+				FEE105F7249436C300582720 /* ViewProtocol+Titleable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE6BBB992491608700CDBBE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE6BBBA22491608700CDBBE5 /* CSVReaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE6BBBA42491608700CDBBE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE6BBBAD2491608700CDBBE5 /* CSVReaderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE6BBB9F2491608700CDBBE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE6BBB862491608600CDBBE5 /* CSVReader */;
+			targetProxy = FE6BBB9E2491608700CDBBE5 /* PBXContainerItemProxy */;
+		};
+		FE6BBBAA2491608700CDBBE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE6BBB862491608600CDBBE5 /* CSVReader */;
+			targetProxy = FE6BBBA92491608700CDBBE5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FE6BBB952491608700CDBBE5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE6BBB962491608700CDBBE5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE6BBBAF2491608700CDBBE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FE6BBBB02491608700CDBBE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE6BBBB22491608700CDBBE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = PBJAETU4UU;
+				INFOPLIST_FILE = "CSVReader/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pesate.CSVReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FE6BBBB32491608700CDBBE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = PBJAETU4UU;
+				INFOPLIST_FILE = "CSVReader/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pesate.CSVReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		FE6BBBB52491608700CDBBE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PBJAETU4UU;
+				INFOPLIST_FILE = CSVReaderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pesate.CSVReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSVReader.app/CSVReader";
+			};
+			name = Debug;
+		};
+		FE6BBBB62491608700CDBBE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PBJAETU4UU;
+				INFOPLIST_FILE = CSVReaderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pesate.CSVReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSVReader.app/CSVReader";
+			};
+			name = Release;
+		};
+		FE6BBBB82491608700CDBBE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PBJAETU4UU;
+				INFOPLIST_FILE = CSVReaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pesate.CSVReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CSVReader;
+			};
+			name = Debug;
+		};
+		FE6BBBB92491608700CDBBE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PBJAETU4UU;
+				INFOPLIST_FILE = CSVReaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pesate.CSVReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CSVReader;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE6BBB822491608600CDBBE5 /* Build configuration list for PBXProject "CSVReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE6BBBAF2491608700CDBBE5 /* Debug */,
+				FE6BBBB02491608700CDBBE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE6BBBB12491608700CDBBE5 /* Build configuration list for PBXNativeTarget "CSVReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE6BBBB22491608700CDBBE5 /* Debug */,
+				FE6BBBB32491608700CDBBE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE6BBBB42491608700CDBBE5 /* Build configuration list for PBXNativeTarget "CSVReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE6BBBB52491608700CDBBE5 /* Debug */,
+				FE6BBBB62491608700CDBBE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE6BBBB72491608700CDBBE5 /* Build configuration list for PBXNativeTarget "CSVReaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE6BBBB82491608700CDBBE5 /* Debug */,
+				FE6BBBB92491608700CDBBE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FE6BBBBC2491613A00CDBBE5 /* CSVReaderCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CSVReaderCore;
+		};
+		FEE34D502494265A00C0C45A /* CommonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CommonUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FE6BBB7F2491608600CDBBE5 /* Project object */;
+}

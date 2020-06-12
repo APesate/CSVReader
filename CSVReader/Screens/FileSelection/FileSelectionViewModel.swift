@@ -9,10 +9,13 @@
 import Foundation
 import CSVReaderCore
 import Combine
+import CommonUI
 
-final class FileSelectionViewModel: ObservableObject {
+final class FileSelectionViewModel: ViewModelProtocol, Titleable {
 
 	@Published var dataSource: [String] = []
+
+	@Localized private(set) var title: String = "Documents"
 
 	private var disposables: Set<AnyCancellable> = []
 	private let fileExplorer: FileExplorer
@@ -23,7 +26,7 @@ final class FileSelectionViewModel: ObservableObject {
 
 	// MARK: Interface
 
-	func loadData() {
+	func refresh() {
 		do
 		{
 			let  paths = try fileExplorer.paths(forFilesOf: "csv")
@@ -37,7 +40,6 @@ final class FileSelectionViewModel: ObservableObject {
 	}
 
 	// MARK: Private
-
 
 
 }
