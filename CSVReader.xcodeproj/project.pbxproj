@@ -18,8 +18,6 @@
 		FE6BBC0F24917B0D00CDBBE5 /* ContentDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BBC0E24917B0D00CDBBE5 /* ContentDisplayView.swift */; };
 		FE6BBC1124917B1600CDBBE5 /* ContentDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BBC1024917B1600CDBBE5 /* ContentDisplayViewController.swift */; };
 		FE6BBC1324917B1C00CDBBE5 /* ContentDisplayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BBC1224917B1C00CDBBE5 /* ContentDisplayViewModel.swift */; };
-		FED53B02249417DB00447A5A /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = FEA9CF8C2492C0F9007C1FBA /* issues.csv */; };
-		FED53B03249417E400447A5A /* Teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = FED53AF82492E11D00447A5A /* Teams.csv */; };
 		FED53B0F249420CF00447A5A /* FileSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED53B0E249420CF00447A5A /* FileSelectionView.swift */; };
 		FED53B11249420D500447A5A /* FileSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED53B10249420D500447A5A /* FileSelectionViewController.swift */; };
 		FED53B14249421F100447A5A /* FileSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED53B13249421F100447A5A /* FileSelectionTableViewCell.swift */; };
@@ -29,6 +27,8 @@
 		FEE105F02494359100582720 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105EF2494359100582720 /* ViewProtocol.swift */; };
 		FEE105F3249435A900582720 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105F2249435A900582720 /* ViewModelProtocol.swift */; };
 		FEE105F7249436C300582720 /* ViewProtocol+Titleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105F6249436C300582720 /* ViewProtocol+Titleable.swift */; };
+		FEE105F92494384300582720 /* Teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = FED53AF82492E11D00447A5A /* Teams.csv */; };
+		FEE105FA2494384300582720 /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = FEA9CF8C2492C0F9007C1FBA /* issues.csv */; };
 		FEE34D512494265A00C0C45A /* CommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = FEE34D502494265A00C0C45A /* CommonUI */; };
 /* End PBXBuildFile section */
 
@@ -406,8 +406,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FED53B02249417DB00447A5A /* issues.csv in Resources */,
-				FED53B03249417E400447A5A /* Teams.csv in Resources */,
+				FEE105FA2494384300582720 /* issues.csv in Resources */,
+				FEE105F92494384300582720 /* Teams.csv in Resources */,
 				FE6BBB972491608700CDBBE5 /* LaunchScreen.storyboard in Resources */,
 				FE6BBB942491608700CDBBE5 /* Assets.xcassets in Resources */,
 			);

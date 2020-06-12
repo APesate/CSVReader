@@ -12,16 +12,8 @@ import CommonUI
 
 final class FileSelectionViewController: UIViewController, ViewProtocol, Titleable {
 
-	private typealias DataSource = UITableViewDiffableDataSource<Section, String>
-	private typealias Snapshot = NSDiffableDataSourceSnapshot<Section, String>
-
-	enum Section {
-
-		case main
-
-	}
-
-	let viewModel: FileSelectionViewModel 
+	let viewModel: FileSelectionViewModel
+	
 	private var myView: FileSelectionView! { view as? FileSelectionView }
 	private var disposables: Set<AnyCancellable> = []
 	private lazy var tableViewDataSource = makeDataSource()
@@ -68,6 +60,15 @@ final class FileSelectionViewController: UIViewController, ViewProtocol, Titleab
 
 // MARK: - TableView
 private extension FileSelectionViewController {
+
+	private typealias DataSource = UITableViewDiffableDataSource<Section, String>
+	private typealias Snapshot = NSDiffableDataSourceSnapshot<Section, String>
+
+	private enum Section {
+
+		case main
+
+	}
 
 	private func makeDataSource() -> DataSource {
 		let dataSource = DataSource(tableView: myView.tableView, cellProvider: cell(for:at:for:))
