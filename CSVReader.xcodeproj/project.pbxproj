@@ -29,6 +29,9 @@
 		FEE105F7249436C300582720 /* ViewProtocol+Titleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105F6249436C300582720 /* ViewProtocol+Titleable.swift */; };
 		FEE105F92494384300582720 /* Teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = FED53AF82492E11D00447A5A /* Teams.csv */; };
 		FEE105FA2494384300582720 /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = FEA9CF8C2492C0F9007C1FBA /* issues.csv */; };
+		FEE105FD2494417F00582720 /* ContentDisplayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105FC2494417F00582720 /* ContentDisplayCollectionViewCell.swift */; };
+		FEE106002494421700582720 /* ContentDisplayDesignGuidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105FF2494421700582720 /* ContentDisplayDesignGuidelines.swift */; };
+		FEE106032494472400582720 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE106022494472400582720 /* Record.swift */; };
 		FEE34D512494265A00C0C45A /* CommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = FEE34D502494265A00C0C45A /* CommonUI */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +81,9 @@
 		FEE105EF2494359100582720 /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		FEE105F2249435A900582720 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		FEE105F6249436C300582720 /* ViewProtocol+Titleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewProtocol+Titleable.swift"; sourceTree = "<group>"; };
+		FEE105FC2494417F00582720 /* ContentDisplayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDisplayCollectionViewCell.swift; sourceTree = "<group>"; };
+		FEE105FF2494421700582720 /* ContentDisplayDesignGuidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDisplayDesignGuidelines.swift; sourceTree = "<group>"; };
+		FEE106022494472400582720 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		FEE34D3D249424D700C0C45A /* CommonUI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CommonUI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,6 +235,9 @@
 		FE6BBC0924917AC100CDBBE5 /* ContentDisplay */ = {
 			isa = PBXGroup;
 			children = (
+				FEE106012494471D00582720 /* Model */,
+				FEE105FE2494420F00582720 /* Design Guidelines */,
+				FEE105FB2494417400582720 /* Components */,
 				FE6BBC0E24917B0D00CDBBE5 /* ContentDisplayView.swift */,
 				FE6BBC1024917B1600CDBBE5 /* ContentDisplayViewController.swift */,
 				FE6BBC1224917B1C00CDBBE5 /* ContentDisplayViewModel.swift */,
@@ -294,6 +303,30 @@
 				FEE105F2249435A900582720 /* ViewModelProtocol.swift */,
 			);
 			path = Contracts;
+			sourceTree = "<group>";
+		};
+		FEE105FB2494417400582720 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FEE105FC2494417F00582720 /* ContentDisplayCollectionViewCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FEE105FE2494420F00582720 /* Design Guidelines */ = {
+			isa = PBXGroup;
+			children = (
+				FEE105FF2494421700582720 /* ContentDisplayDesignGuidelines.swift */,
+			);
+			path = "Design Guidelines";
+			sourceTree = "<group>";
+		};
+		FEE106012494471D00582720 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FEE106022494472400582720 /* Record.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,6 +469,7 @@
 			files = (
 				FEE105EE2494330C00582720 /* Titleable.swift in Sources */,
 				FEE105EB249431F700582720 /* NavigationController.swift in Sources */,
+				FEE106032494472400582720 /* Record.swift in Sources */,
 				FE6BBB8B2491608600CDBBE5 /* AppDelegate.swift in Sources */,
 				FED53B172494227200447A5A /* FileSelectionDesignGuidelines.swift in Sources */,
 				FEE105F3249435A900582720 /* ViewModelProtocol.swift in Sources */,
@@ -443,7 +477,9 @@
 				FED53B14249421F100447A5A /* FileSelectionTableViewCell.swift in Sources */,
 				FE6BBC0D24917AE700CDBBE5 /* FileSelectionViewModel.swift in Sources */,
 				FED53B0F249420CF00447A5A /* FileSelectionView.swift in Sources */,
+				FEE105FD2494417F00582720 /* ContentDisplayCollectionViewCell.swift in Sources */,
 				FED53B11249420D500447A5A /* FileSelectionViewController.swift in Sources */,
+				FEE106002494421700582720 /* ContentDisplayDesignGuidelines.swift in Sources */,
 				FE6BBC0F24917B0D00CDBBE5 /* ContentDisplayView.swift in Sources */,
 				FE6BBC1124917B1600CDBBE5 /* ContentDisplayViewController.swift in Sources */,
 				FE6BBC1324917B1C00CDBBE5 /* ContentDisplayViewModel.swift in Sources */,

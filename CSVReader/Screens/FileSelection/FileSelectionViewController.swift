@@ -37,11 +37,6 @@ final class FileSelectionViewController: UIViewController, ViewProtocol, Titleab
 		super.viewDidLoad()
 
 		setupComponents()
-	}
-
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
-
 		bindDataSource()
 		viewModel.refresh()
 	}
@@ -102,6 +97,9 @@ extension FileSelectionViewController: UITableViewDelegate {
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
+		guard let destinationVC = viewModel.open(fileAt: indexPath.row) else { return }
+
+		navigationController?.pushViewController(destinationVC, animated: true)
 	}
 
 }
