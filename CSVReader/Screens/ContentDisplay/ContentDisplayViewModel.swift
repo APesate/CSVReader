@@ -14,8 +14,9 @@ import CommonUI
 final class ContentDisplayViewModel: ViewModelProtocol, Titleable {
 
 	@Published var dataSource: [[Record]] = []
+	@Published var isLoading: Bool = false
 
-	@Localized private(set) var title: String = "File"
+	@Localized private(set) var title: String = ""
 	private var disposables: Set<AnyCancellable> = []
 	private let fileLocation: URL
 	private let fileReader: CSVFileReader
@@ -23,12 +24,15 @@ final class ContentDisplayViewModel: ViewModelProtocol, Titleable {
 	init(fileLocation: URL, fileReader: CSVFileReader = .init()) {
 		self.fileLocation = fileLocation
 		self.fileReader = fileReader
+		self.title = fileLocation.lastPathComponent
 	}
 
 	// MARK: Interface
 
 	func loadData() {
 		let subject = PassthroughSubject<Int, Never>()
+
+		isLoading = true
 
 		subject.sink { (progress) in
 			print(progress)
@@ -53,6 +57,7 @@ final class ContentDisplayViewModel: ViewModelProtocol, Titleable {
 				}
 			}, receiveValue: { [weak self] (records) in
 				guard let self = self else { return }
+				self.isLoading = false
 				self.dataSource = records
 			})
 			.store(in: &disposables)

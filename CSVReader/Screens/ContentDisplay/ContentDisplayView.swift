@@ -27,11 +27,12 @@ final class ContentDisplayView: UIView {
 		let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
 		collectionView.delaysContentTouches = true
 		collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-		collectionView.backgroundColor = .lightGray
+		collectionView.backgroundColor = .systemGroupedBackground
 
 		return collectionView
 	}()
-	private(set) var scrollView = UIScrollView(frame: .zero)
+	let activityIndicator = UIActivityIndicatorView(style: .large)
+	let scrollView = UIScrollView(frame: .zero)
 	private var collectionViewWidthConstraint: NSLayoutConstraint!
 
 	init() {
@@ -51,20 +52,25 @@ final class ContentDisplayView: UIView {
 	// MARK: Private
 
 	private func setupComponents() {
-		backgroundColor = .lightGray
+		backgroundColor = .systemGroupedBackground
 
+		activityIndicator.color = .systemOrange
+		
 		scrollView.isDirectionalLockEnabled = true
 
-		addSubview(scrollView)
+		[scrollView, activityIndicator].forEach(addSubview(_:))
 		scrollView.addSubview(collectionView)
 	}
 
 	private func setupConstraints() {
-		[collectionView, scrollView].forEach({ $0.translatesAutoresizingMaskIntoConstraints = false })
+		[collectionView, scrollView, activityIndicator].forEach({ $0.translatesAutoresizingMaskIntoConstraints = false })
 
 		collectionViewWidthConstraint = collectionView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width)
 
 		NSLayoutConstraint.activate([
+			activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor),
+			activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
+
 			scrollView.topAnchor.constraint(equalTo: topAnchor),
 			scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
 			scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),

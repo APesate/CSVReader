@@ -29,8 +29,9 @@ final class ContentDisplayCollectionViewCell: UICollectionViewCell {
 	// MARK: Private
 
 	private func setupComponents() {
-		contentView.backgroundColor = .white
+		contentView.backgroundColor = .secondarySystemGroupedBackground
 
+		contentLabel.textColor = .label
 		contentLabel.numberOfLines = 0
 		contentLabel.minimumScaleFactor = 0.6
 		contentLabel.adjustsFontSizeToFitWidth = true

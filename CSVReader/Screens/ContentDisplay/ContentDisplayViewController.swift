@@ -40,11 +40,31 @@ final class ContentDisplayViewController: UIViewController, ViewProtocol, Titlea
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 
-		bindDataSource()
+		bindContent()
 		viewModel.loadData()
 	}
 
 	// MARK: Private
+
+	// MARK: Observers
+
+	private func bindContent() {
+		bindDataSource()
+		bindLoadingState()
+	}
+
+	private func bindLoadingState() {
+		viewModel
+			.$isLoading
+			.sink(receiveValue: { [weak myView] isLoading in
+				isLoading ?
+					myView?.activityIndicator.startAnimating() :
+					myView?.activityIndicator.stopAnimating()
+			})
+			.store(in: &disposables)
+	}
+
+	// MARK: Setup
 
 	private func setupComponents() {
 		myView.collectionView.register(ContentDisplayCollectionViewCell.self, forCellWithReuseIdentifier: ContentDisplayCollectionViewCell.className)
