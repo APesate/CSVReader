@@ -37,13 +37,53 @@ final class FileSelectionViewController: UIViewController, ViewProtocol, Titleab
 		super.viewDidLoad()
 
 		setupComponents()
-		bindDataSource()
+		bindContent()
 		viewModel.refresh()
 	}
 
 	// MARK: Interface
 
 	// MARK: Private
+
+	// MARK: Observers
+
+	private func bindContent() {
+		bindDataSource()
+		bindErrorState()
+	}
+
+	private func bindDataSource() {
+		viewModel
+			.$dataSource
+			.sink { [weak tableViewDataSource] (files) in
+				guard var snapshot = tableViewDataSource?.snapshot() else { return }
+				snapshot.appendItems(files, toSection: .main)
+				tableViewDataSource?.apply(snapshot, animatingDifferences: true)
+		}
+		.store(in: &disposables)
+	}
+
+	private func bindErrorState() {
+		viewModel
+			.$error
+			.sink(receiveValue: { [weak myView] (error) in
+				guard let error = error else {
+					myView?.set(errorModel: nil)
+					return
+				}
+
+				switch error {
+					case .noFilesFound:
+						myView?.set(errorModel: ErrorView.Model(icon: UIImage(named: "error_404"), description: error.localizedDescription))
+
+					case .fileNotFound:
+						break
+				}
+			})
+			.store(in: &disposables)
+	}
+
+	// MARK: Setup
 
 	private func setupComponents() {
 		myView.tableView.register(FileSelectionTableViewCell.self, forCellReuseIdentifier: FileSelectionTableViewCell.className)
@@ -78,17 +118,6 @@ private extension FileSelectionViewController {
 		let cell = tableView.dequeueReusableCell(withIdentifier: FileSelectionTableViewCell.className, for: indexPath) as? FileSelectionTableViewCell
 		cell?.fileNameLabel.text = model
 		return cell
-	}
-
-	private func bindDataSource() {
-		viewModel
-			.$dataSource
-			.sink { [weak tableViewDataSource] (files) in
-				guard var snapshot = tableViewDataSource?.snapshot() else { return }
-				snapshot.appendItems(files, toSection: .main)
-				tableViewDataSource?.apply(snapshot, animatingDifferences: true)
-		}
-		.store(in: &disposables)
 	}
 
 }

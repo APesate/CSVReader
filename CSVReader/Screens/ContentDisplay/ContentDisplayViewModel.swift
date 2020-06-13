@@ -15,6 +15,7 @@ final class ContentDisplayViewModel: ViewModelProtocol, Titleable {
 
 	@Published var dataSource: [[Record]] = []
 	@Published var isLoading: Bool = false
+	@Published var error: CSVReaderError?
 
 	@Localized private(set) var title: String = ""
 	private var disposables: Set<AnyCancellable> = []
@@ -47,13 +48,15 @@ final class ContentDisplayViewModel: ViewModelProtocol, Titleable {
 					})
 				}
 			})
-			.sink(receiveCompletion: { (completion) in
+			.sink(receiveCompletion: { [weak self] (completion) in
+				guard let self = self else { return }
+				self.isLoading = false
 				switch completion {
 					case .failure(let error):
-						print(error)
+						self.error = error
 
 					case .finished:
-						print("finished")
+						self.error = nil
 				}
 			}, receiveValue: { [weak self] (records) in
 				guard let self = self else { return }

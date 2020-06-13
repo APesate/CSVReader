@@ -15,6 +15,7 @@ import UIKit.UIViewController
 final class FileSelectionViewModel: ViewModelProtocol, Titleable {
 
 	@Published var dataSource: [String] = []
+	@Published var error: FileExplorerError?
 
 	@Localized private(set) var title: String = "Documents"
 
@@ -33,8 +34,9 @@ final class FileSelectionViewModel: ViewModelProtocol, Titleable {
 			let  paths = try fileExplorer.paths(forFilesOf: "csv")
 			dataSource = paths.map({ $0.deletingPathExtension().lastPathComponent })
 
-		} catch let FileExplorerError.noFilesFound(type) {
-			print("No files found of type: \(type)")
+		} catch let error as FileExplorerError {
+			self.error = error
+
 		} catch {
 			assertionFailure("Unsupported Error Type")
 		}
@@ -42,14 +44,17 @@ final class FileSelectionViewModel: ViewModelProtocol, Titleable {
 
 	func open(fileAt index: Int) -> UIViewController? {
 		let fileName = dataSource[index]
+		error = nil
+
 		do {
 			let path = try fileExplorer.path(forFile: fileName, withExtension: "csv")
 			let destinationVM = ContentDisplayViewModel(fileLocation: path)
 
 			return ContentDisplayViewController(viewModel: destinationVM)
 
-		} catch FileExplorerError.fileNotFound {
-			print("File not found: \(fileName).csv")
+		} catch let error as FileExplorerError {
+			self.error = error
+
 		} catch {
 			assertionFailure("Unsupported Error Type")
 		}

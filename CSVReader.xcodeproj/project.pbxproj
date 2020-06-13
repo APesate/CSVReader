@@ -22,13 +22,14 @@
 		FED53B11249420D500447A5A /* FileSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED53B10249420D500447A5A /* FileSelectionViewController.swift */; };
 		FED53B14249421F100447A5A /* FileSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED53B13249421F100447A5A /* FileSelectionTableViewCell.swift */; };
 		FED53B172494227200447A5A /* FileSelectionDesignGuidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED53B162494227200447A5A /* FileSelectionDesignGuidelines.swift */; };
+		FED9A1012494F23800CB22AD /* ErrorStateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9A1002494F23800CB22AD /* ErrorStateable.swift */; };
+		FED9A1022494F58100CB22AD /* Teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = FED53AF82492E11D00447A5A /* Teams.csv */; };
+		FED9A1032494F58100CB22AD /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = FEA9CF8C2492C0F9007C1FBA /* issues.csv */; };
 		FEE105EB249431F700582720 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105EA249431F700582720 /* NavigationController.swift */; };
 		FEE105EE2494330C00582720 /* Titleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105ED2494330C00582720 /* Titleable.swift */; };
 		FEE105F02494359100582720 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105EF2494359100582720 /* ViewProtocol.swift */; };
 		FEE105F3249435A900582720 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105F2249435A900582720 /* ViewModelProtocol.swift */; };
 		FEE105F7249436C300582720 /* ViewProtocol+Titleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105F6249436C300582720 /* ViewProtocol+Titleable.swift */; };
-		FEE105F92494384300582720 /* Teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = FED53AF82492E11D00447A5A /* Teams.csv */; };
-		FEE105FA2494384300582720 /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = FEA9CF8C2492C0F9007C1FBA /* issues.csv */; };
 		FEE105FD2494417F00582720 /* ContentDisplayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105FC2494417F00582720 /* ContentDisplayCollectionViewCell.swift */; };
 		FEE106002494421700582720 /* ContentDisplayDesignGuidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105FF2494421700582720 /* ContentDisplayDesignGuidelines.swift */; };
 		FEE106032494472400582720 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE106022494472400582720 /* Record.swift */; };
@@ -76,6 +77,7 @@
 		FED53B10249420D500447A5A /* FileSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectionViewController.swift; sourceTree = "<group>"; };
 		FED53B13249421F100447A5A /* FileSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		FED53B162494227200447A5A /* FileSelectionDesignGuidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectionDesignGuidelines.swift; sourceTree = "<group>"; };
+		FED9A1002494F23800CB22AD /* ErrorStateable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateable.swift; sourceTree = "<group>"; };
 		FEE105EA249431F700582720 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		FEE105ED2494330C00582720 /* Titleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Titleable.swift; sourceTree = "<group>"; };
 		FEE105EF2494359100582720 /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 			children = (
 				FEE105ED2494330C00582720 /* Titleable.swift */,
 				FEE105F6249436C300582720 /* ViewProtocol+Titleable.swift */,
+				FED9A1002494F23800CB22AD /* ErrorStateable.swift */,
 			);
 			path = "View Customization";
 			sourceTree = "<group>";
@@ -439,8 +442,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEE105FA2494384300582720 /* issues.csv in Resources */,
-				FEE105F92494384300582720 /* Teams.csv in Resources */,
+				FED9A1032494F58100CB22AD /* issues.csv in Resources */,
+				FED9A1022494F58100CB22AD /* Teams.csv in Resources */,
 				FE6BBB972491608700CDBBE5 /* LaunchScreen.storyboard in Resources */,
 				FE6BBB942491608700CDBBE5 /* Assets.xcassets in Resources */,
 			);
@@ -469,6 +472,7 @@
 			files = (
 				FEE105EE2494330C00582720 /* Titleable.swift in Sources */,
 				FEE105EB249431F700582720 /* NavigationController.swift in Sources */,
+				FED9A1012494F23800CB22AD /* ErrorStateable.swift in Sources */,
 				FEE106032494472400582720 /* Record.swift in Sources */,
 				FE6BBB8B2491608600CDBBE5 /* AppDelegate.swift in Sources */,
 				FED53B172494227200447A5A /* FileSelectionDesignGuidelines.swift in Sources */,

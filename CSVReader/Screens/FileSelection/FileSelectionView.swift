@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CommonUI
 
-final class FileSelectionView: UIView {
+final class FileSelectionView: UIView, ErrorStateable {
 
 	let tableView = UITableView(frame: .zero, style: .grouped)
+	lazy var errorView = ErrorView()
 
 	init() {
 		super.init(frame: .zero)

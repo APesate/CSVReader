@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CommonUI
 
-final class ContentDisplayView: UIView {
+final class ContentDisplayView: UIView, ErrorStateable {
 
 	var collectionViewWidth: CGFloat = UIScreen.main.bounds.width {
 		didSet {
@@ -33,6 +34,7 @@ final class ContentDisplayView: UIView {
 	}()
 	let activityIndicator = UIActivityIndicatorView(style: .large)
 	let scrollView = UIScrollView(frame: .zero)
+	lazy var errorView = ErrorView()
 	private var collectionViewWidthConstraint: NSLayoutConstraint!
 
 	init() {

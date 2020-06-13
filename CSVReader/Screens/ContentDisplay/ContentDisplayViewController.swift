@@ -8,6 +8,7 @@
 
 import UIKit
 import Combine
+import CommonUI
 
 final class ContentDisplayViewController: UIViewController, ViewProtocol, Titleable {
 
@@ -51,6 +52,7 @@ final class ContentDisplayViewController: UIViewController, ViewProtocol, Titlea
 	private func bindContent() {
 		bindDataSource()
 		bindLoadingState()
+		bindErrorState()
 	}
 
 	private func bindLoadingState() {
@@ -60,6 +62,23 @@ final class ContentDisplayViewController: UIViewController, ViewProtocol, Titlea
 				isLoading ?
 					myView?.activityIndicator.startAnimating() :
 					myView?.activityIndicator.stopAnimating()
+			})
+			.store(in: &disposables)
+	}
+
+	private func bindErrorState() {
+		viewModel
+			.$error
+			.sink(receiveValue: { [weak myView] (error) in
+				guard let error = error else {
+					myView?.set(errorModel: nil)
+					return
+				}
+
+				switch error {
+					case .failedToOpenFile:
+						myView?.set(errorModel: ErrorView.Model(icon: UIImage(named: "error_warning"), description: error.localizedDescription))
+				}
 			})
 			.store(in: &disposables)
 	}
