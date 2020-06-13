@@ -29,8 +29,7 @@ final class FileSelectionViewModel: ViewModelProtocol, Titleable {
 	// MARK: Interface
 
 	func refresh() {
-		do
-		{
+		do {
 			let  paths = try fileExplorer.paths(forFilesOf: "csv")
 			dataSource = paths.map({ $0.deletingPathExtension().lastPathComponent })
 
@@ -63,6 +62,5 @@ final class FileSelectionViewModel: ViewModelProtocol, Titleable {
 	}
 
 	// MARK: Private
-
 
 }

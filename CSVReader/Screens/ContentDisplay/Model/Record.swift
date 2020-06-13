@@ -16,7 +16,7 @@ struct Record: Identifiable, Hashable {
 		self.content = content
 	}
 
-	static func ==(lhs: Record, rhs: Record) -> Bool {
+	static func == (lhs: Record, rhs: Record) -> Bool {
 		return lhs.id == rhs.id
 	}
 

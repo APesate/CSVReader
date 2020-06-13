@@ -41,7 +41,7 @@ final class FileSelectionView: UIView, ErrorStateable {
 			tableView.topAnchor.constraint(equalTo: topAnchor),
 			tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
 			trailingAnchor.constraint(equalTo: tableView.trailingAnchor),
-			bottomAnchor.constraint(equalTo: tableView.bottomAnchor),
+			bottomAnchor.constraint(equalTo: tableView.bottomAnchor)
 		])
 	}
 

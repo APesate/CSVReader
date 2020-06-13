@@ -66,5 +66,4 @@ final class ContentDisplayViewModel: ViewModelProtocol, Titleable {
 			.store(in: &disposables)
 	}
 
-
 }

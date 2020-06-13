@@ -11,6 +11,7 @@ import UIKit
 protocol ViewProtocol {
 
 	associatedtype ViewModel: ViewModelProtocol
+	
 	var viewModel: ViewModel { get }
 	
 }
