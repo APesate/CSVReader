@@ -1,4 +1,5 @@
 "Key","English","Dutch","Spanish"
 "file_explorer_title","Files","Bestanden","Archivos"
-"file_explorer_no_files_found_for_type","We couldn't find any '.%s' files in the bundle. Please verify they were added correctly.","We kunnen geen '.%s' bestanden in de bundel vinden. Controleer of ze correct zijn toegevoegd.","No encontramos ningun archivo del tipo '.%s'. Verifica que se hayan añadido correctamente."
+"file_explorer_no_files_found_for_type","We couldn't find any '.%@' files in the bundle. Please verify they were added correctly.","We kunnen geen '.%@' bestanden in de bundel vinden. Controleer of ze correct zijn toegevoegd.","No encontramos ningun archivo del tipo '.%@'. Verifica que se hayan añadido correctamente."
 "content_display_failed_to_open_file","Something went wrong while reading the file. Please verify it's integrity and try again.","Er is iets misgegaan bij het lezen van het bestand. Controleer de integriteit en probeer het opnieuw.","Algo falló al tratando de leer el archivo. Porfavor, verifique que la integridad del mismo e inténtolo de nuevo."
+"content_display_file_not_found","The file was not found. Please verify that it's there and reachable.","Het bestand is niet gevonden. Controleer of het daar is en bereikbaar is.","No encontramos el archivo. Verifica que se hayan añadido correctamente."

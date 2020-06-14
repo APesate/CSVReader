@@ -29,6 +29,9 @@ final class FileSelectionTableViewCell: UITableViewCell {
 	// MARK: Private
 
 	private func setupComponents() {
+		fileNameLabel.font = .preferredFont(forTextStyle: .body)
+
+		contentView.backgroundColor = .raboBackground
 		contentView.addSubview(fileNameLabel)
 	}
 

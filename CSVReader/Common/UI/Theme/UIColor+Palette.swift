@@ -10,6 +10,10 @@ import UIKit
 
 extension UIColor {
 
+	static var raboNeutral: UIColor {
+		return UIColor(named: "Rabo_Neutral")!
+	}
+
 	static var raboBackground: UIColor {
 		return UIColor(named: "Rabo_Background")!
 	}

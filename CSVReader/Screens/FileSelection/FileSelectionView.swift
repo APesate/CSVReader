@@ -31,6 +31,9 @@ final class FileSelectionView: UIView, ErrorStateable {
 	// MARK: Private
 
 	private func setupComponents() {
+		backgroundColor = .systemGroupedBackground
+
+		tableView.backgroundColor = .systemGroupedBackground
 		addSubview(tableView)
 	}
 

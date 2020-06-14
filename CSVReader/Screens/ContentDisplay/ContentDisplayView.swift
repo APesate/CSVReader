@@ -55,8 +55,9 @@ final class ContentDisplayView: UIView, ErrorStateable {
 
 	private func setupComponents() {
 		backgroundColor = .systemGroupedBackground
-
-		activityIndicator.color = .systemOrange
+		collectionView.backgroundColor = .systemGroupedBackground
+		
+		activityIndicator.color = .raboOrange
 		
 		scrollView.isDirectionalLockEnabled = true
 

@@ -1,3 +1,4 @@
 "file_explorer_title"                   = "Archivos";
-"file_explorer_no_files_found_for_type" = "No encontramos ningun archivo del tipo '.%s'. Verifica que se hayan añadido correctamente.";
+"file_explorer_no_files_found_for_type" = "No encontramos ningun archivo del tipo '.%@'. Verifica que se hayan añadido correctamente.";
 "content_display_failed_to_open_file"   = "Algo falló al tratando de leer el archivo. Porfavor, verifique que la integridad del mismo e inténtolo de nuevo.";
+"content_display_file_not_found"        = "No encontramos el archivo. Verifica que se hayan añadido correctamente.";

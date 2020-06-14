@@ -40,7 +40,7 @@ final class ContentDisplayViewModel: ViewModelProtocol, Titleable {
 		}.store(in: &disposables)
 
 		fileReader
-			.read(fileAt: fileLocation.path, progressListener: subject)
+			.read(fileAt: fileLocation, progressListener: subject)
 			.sink(receiveCompletion: { [weak self] (completion) in
 				guard let self = self else { return }
 				self.isLoading = false

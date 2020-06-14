@@ -73,8 +73,8 @@ final class FileSelectionViewController: UIViewController, ViewProtocol, Titleab
 				}
 
 				switch error {
-					case .noFilesFound:
-						myView?.set(errorModel: ErrorView.Model(icon: UIImage(named: "error_404"), description: "file_explorer_no_files_found_for_type".localized))
+					case .noFilesFound(let type):
+						myView?.set(errorModel: ErrorView.Model(icon: UIImage(named: "error_404"), description: "file_explorer_no_files_found_for_type".localized(with: [type])))
 
 					case .fileNotFound:
 						break

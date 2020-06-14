@@ -10,17 +10,11 @@ import UIKit
 
 final class NavigationController: UINavigationController {
 
+	override var preferredStatusBarStyle: UIStatusBarStyle { .lightContent }
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
-		navigationBar.prefersLargeTitles = true
-		let navBarAppearance = UINavigationBarAppearance()
-		navBarAppearance.configureWithOpaqueBackground()
-		navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-		navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-		navBarAppearance.backgroundColor = .systemBlue
-		navigationBar.standardAppearance = navBarAppearance
-		navigationBar.scrollEdgeAppearance = navBarAppearance
+		applyTheme()
 		delegate = self
 	}
 
@@ -31,6 +25,27 @@ extension NavigationController: UINavigationControllerDelegate {
 
 	func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
 		viewController.title = (viewController as? Titleable)?.title
+	}
+
+}
+
+extension NavigationController {
+
+	private func applyTheme() {
+		themeNavigationBar()
+	}
+
+	private func themeNavigationBar() {
+		let navBarAppearance = UINavigationBarAppearance()
+		navBarAppearance.configureWithOpaqueBackground()
+		navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.preferredFont(forTextStyle: .headline)]
+		navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.preferredFont(forTextStyle: .largeTitle)]
+		navBarAppearance.backgroundColor = .raboBlue
+
+		navigationBar.prefersLargeTitles = true
+		navigationBar.tintColor = .raboOrange
+		navigationBar.standardAppearance = navBarAppearance
+		navigationBar.scrollEdgeAppearance = navBarAppearance
 	}
 
 }

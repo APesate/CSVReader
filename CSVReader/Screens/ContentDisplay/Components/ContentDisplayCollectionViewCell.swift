@@ -29,11 +29,12 @@ final class ContentDisplayCollectionViewCell: UICollectionViewCell {
 	// MARK: Private
 
 	private func setupComponents() {
-		contentView.backgroundColor = .secondarySystemGroupedBackground
+		contentView.backgroundColor = .raboBackground
 
 		contentLabel.textColor = .label
+		contentLabel.font = .preferredFont(forTextStyle: .body)
 		contentLabel.numberOfLines = 0
-		contentLabel.minimumScaleFactor = 0.6
+		contentLabel.minimumScaleFactor = 0.5
 		contentLabel.adjustsFontSizeToFitWidth = true
 
 		contentView.addSubview(contentLabel)

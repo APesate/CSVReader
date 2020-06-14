@@ -77,10 +77,10 @@ final class ContentDisplayViewController: UIViewController, ViewProtocol, Titlea
 
 				switch error {
 					case .failedToOpenFile:
-						myView?.set(errorModel: ErrorView.Model(icon: UIImage(named: "error_warning"), description: error.localizedDescription))
+						myView?.set(errorModel: ErrorView.Model(icon: UIImage(named: "error_warning"), description: "content_display_failed_to_open_file".localized))
 
 					case .fileNotFound:
-						break
+						myView?.set(errorModel: ErrorView.Model(icon: UIImage(named: "error_warning"), description: "content_display_file_not_found".localized))
 				}
 			})
 			.store(in: &disposables)
@@ -123,8 +123,13 @@ extension ContentDisplayViewController: UICollectionViewDataSource {
 		viewModel
 			.$dataSource
 			.sink { [weak myView] (records) in
-				myView?.scrollView.contentSize = CGSize(width: CGFloat(records.count * 200), height: myView?.frame.height ?? 0)
-				myView?.collectionViewWidth = CGFloat(records.count * 200)
+				guard let numberOfColumns = records.first?.values.count else {
+					return
+				}
+				let contentSizeWidth = CGFloat(numberOfColumns) * ContentDisplayDesignGuidelines.View.itemSize.width
+
+				myView?.scrollView.contentSize = CGSize(width: contentSizeWidth, height: myView?.frame.height ?? 0)
+				myView?.collectionViewWidth = contentSizeWidth
 				myView?.collectionView.reloadData()
 
 		}.store(in: &disposables)
