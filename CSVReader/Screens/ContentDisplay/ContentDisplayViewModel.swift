@@ -14,7 +14,7 @@ import CommonUI
 final class ContentDisplayViewModel: ViewModelProtocol, Titleable {
 
 	@Published var dataSource: [Record] = []
-	@Published var isLoading: Bool = false
+	@Published var isLoading: Bool = true
 	@Published var error: CSVReaderError?
 
 	@Localized private(set) var title: String = ""

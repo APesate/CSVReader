@@ -1,0 +1,3 @@
+"file_explorer_title"                   = "Bestanden";
+"file_explorer_no_files_found_for_type" = "We kunnen geen '.%s' bestanden in de bundel vinden. Controleer of ze correct zijn toegevoegd.";
+"content_display_failed_to_open_file"   = "Er is iets misgegaan bij het lezen van het bestand. Controleer de integriteit en probeer het opnieuw.";

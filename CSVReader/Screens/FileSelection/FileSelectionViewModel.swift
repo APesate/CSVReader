@@ -17,7 +17,7 @@ final class FileSelectionViewModel: ViewModelProtocol, Titleable {
 	@Published var dataSource: [String] = []
 	@Published var error: FileExplorerError?
 
-	@Localized private(set) var title: String = "Documents"
+	@Localized private(set) var title: String = "file_explorer_title"
 
 	private var disposables: Set<AnyCancellable> = []
 	private let fileExplorer: FileExplorer

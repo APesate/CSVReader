@@ -14,6 +14,13 @@ final class NavigationController: UINavigationController {
 		super.viewDidLoad()
 
 		navigationBar.prefersLargeTitles = true
+		let navBarAppearance = UINavigationBarAppearance()
+		navBarAppearance.configureWithOpaqueBackground()
+		navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+		navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+		navBarAppearance.backgroundColor = .systemBlue
+		navigationBar.standardAppearance = navBarAppearance
+		navigationBar.scrollEdgeAppearance = navBarAppearance
 		delegate = self
 	}
 
