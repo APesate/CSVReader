@@ -78,6 +78,9 @@ final class ContentDisplayViewController: UIViewController, ViewProtocol, Titlea
 				switch error {
 					case .failedToOpenFile:
 						myView?.set(errorModel: ErrorView.Model(icon: UIImage(named: "error_warning"), description: error.localizedDescription))
+
+					case .fileNotFound:
+						break
 				}
 			})
 			.store(in: &disposables)
@@ -100,7 +103,7 @@ extension ContentDisplayViewController: UICollectionViewDataSource {
 	}
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return viewModel.dataSource[section].count
+		return viewModel.dataSource[section].values.count
 	}
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -109,9 +112,9 @@ extension ContentDisplayViewController: UICollectionViewDataSource {
 			return UICollectionViewCell()
 		}
 
-		let model = viewModel.dataSource[indexPath.section][indexPath.row]
-
-		cell.contentLabel.text = model.content.isEmpty ? "-" : model.content
+		let model = viewModel.dataSource[indexPath.section]
+		let content = model.values[indexPath.row]
+		cell.contentLabel.text = content.isEmpty ? "-" : content
 
 		return cell
 	}

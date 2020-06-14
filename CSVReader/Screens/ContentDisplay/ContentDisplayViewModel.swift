@@ -13,16 +13,16 @@ import CommonUI
 
 final class ContentDisplayViewModel: ViewModelProtocol, Titleable {
 
-	@Published var dataSource: [[Record]] = []
+	@Published var dataSource: [Record] = []
 	@Published var isLoading: Bool = false
 	@Published var error: CSVReaderError?
 
 	@Localized private(set) var title: String = ""
 	private var disposables: Set<AnyCancellable> = []
 	private let fileLocation: URL
-	private let fileReader: CSVFileReader
+	private let fileReader: CSVFileReader<Record>
 
-	init(fileLocation: URL, fileReader: CSVFileReader = .init()) {
+	init(fileLocation: URL, fileReader: CSVFileReader<Record> = .init()) {
 		self.fileLocation = fileLocation
 		self.fileReader = fileReader
 		self.title = fileLocation.lastPathComponent
@@ -41,13 +41,6 @@ final class ContentDisplayViewModel: ViewModelProtocol, Titleable {
 
 		fileReader
 			.read(fileAt: fileLocation.path, progressListener: subject)
-			.map({ (records) -> [[Record]] in
-				records.map { (row) -> [Record] in
-					row.map({ content in
-						Record(content: content)
-					})
-				}
-			})
 			.sink(receiveCompletion: { [weak self] (completion) in
 				guard let self = self else { return }
 				self.isLoading = false

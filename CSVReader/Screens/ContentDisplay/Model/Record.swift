@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import CSVReaderCore
 
-struct Record: Identifiable, Hashable {
+struct Record: Identifiable, Hashable, CSVImportable {
 	var id = UUID()
-	let content: String
+	let values: [String]
 
-	init(content: String) {
-		self.content = content
+	init(from values: [String]) {
+		self.values = values
 	}
 
 	static func == (lhs: Record, rhs: Record) -> Bool {
