@@ -23,7 +23,6 @@
 		FE98DE0B249681C80030598D /* Localizable.csv in Resources */ = {isa = PBXBuildFile; fileRef = FED9A1152495051700CB22AD /* Localizable.csv */; };
 		FE98DE0C249681C80030598D /* Teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = FED53AF82492E11D00447A5A /* Teams.csv */; };
 		FE98DE0D249681C80030598D /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = FEA9CF8C2492C0F9007C1FBA /* issues.csv */; };
-		FE98DE1024968C870030598D /* SwiftDI in Frameworks */ = {isa = PBXBuildFile; productRef = FE98DE0F24968C870030598D /* SwiftDI */; };
 		FE98DE17249696E40030598D /* FileSelectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98DE16249696E40030598D /* FileSelectionViewModelTests.swift */; };
 		FE98DE1B24969C670030598D /* MockFileExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98DE1A24969C670030598D /* MockFileExplorer.swift */; };
 		FED53B0F249420CF00447A5A /* FileSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED53B0E249420CF00447A5A /* FileSelectionView.swift */; };
@@ -80,7 +79,6 @@
 		FE7A23C02496AE90006D9817 /* ContentDisplayViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDisplayViewModelTests.swift; sourceTree = "<group>"; };
 		FE7A23C32496B56E006D9817 /* MockCSVFileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCSVFileReader.swift; sourceTree = "<group>"; };
 		FE98DE09249674820030598D /* UIColor+Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
-		FE98DE0E24968BFC0030598D /* SwiftDI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SwiftDI; sourceTree = "<group>"; };
 		FE98DE15249696E40030598D /* CSVReaderTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CSVReaderTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		FE98DE16249696E40030598D /* FileSelectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectionViewModelTests.swift; sourceTree = "<group>"; };
 		FE98DE1A24969C670030598D /* MockFileExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFileExplorer.swift; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE98DE1024968C870030598D /* SwiftDI in Frameworks */,
 				FE6BBBBD2491613A00CDBBE5 /* CSVReaderCore in Frameworks */,
 				FEE34D512494265A00C0C45A /* CommonUI in Frameworks */,
 			);
@@ -208,7 +205,6 @@
 		FE6BBBE02491708400CDBBE5 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				FE98DE0E24968BFC0030598D /* SwiftDI */,
 				FEE34D3D249424D700C0C45A /* CommonUI */,
 				FE6BBBBA249160E300CDBBE5 /* CSVReaderCore */,
 			);
@@ -437,7 +433,6 @@
 			packageProductDependencies = (
 				FE6BBBBC2491613A00CDBBE5 /* CSVReaderCore */,
 				FEE34D502494265A00C0C45A /* CommonUI */,
-				FE98DE0F24968C870030598D /* SwiftDI */,
 			);
 			productName = CSVReader;
 			productReference = FE6BBB872491608600CDBBE5 /* CSVReader.app */;
@@ -970,10 +965,6 @@
 		FE6BBBBC2491613A00CDBBE5 /* CSVReaderCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CSVReaderCore;
-		};
-		FE98DE0F24968C870030598D /* SwiftDI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SwiftDI;
 		};
 		FEE34D502494265A00C0C45A /* CommonUI */ = {
 			isa = XCSwiftPackageProductDependency;
