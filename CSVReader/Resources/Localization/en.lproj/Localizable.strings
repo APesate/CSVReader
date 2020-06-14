@@ -1,3 +1,4 @@
+"splash_message"                        = "Your best ally against CSVs";
 "file_explorer_title"                   = "Files";
 "file_explorer_no_files_found_for_type" = "We couldn't find any '.%@' files in the bundle. Please verify they were added correctly.";
 "content_display_failed_to_open_file"   = "Something went wrong while reading the file. Please verify it's integrity and try again.";

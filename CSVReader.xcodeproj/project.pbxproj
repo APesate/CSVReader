@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FE6BBB8B2491608600CDBBE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BBB8A2491608600CDBBE5 /* AppDelegate.swift */; };
-		FE6BBB8D2491608600CDBBE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BBB8C2491608600CDBBE5 /* SceneDelegate.swift */; };
 		FE6BBB942491608700CDBBE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE6BBB932491608700CDBBE5 /* Assets.xcassets */; };
 		FE6BBB972491608700CDBBE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6BBB952491608700CDBBE5 /* LaunchScreen.storyboard */; };
-		FE6BBBAD2491608700CDBBE5 /* CSVReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BBBAC2491608700CDBBE5 /* CSVReaderUITests.swift */; };
 		FE6BBBBD2491613A00CDBBE5 /* CSVReaderCore in Frameworks */ = {isa = PBXBuildFile; productRef = FE6BBBBC2491613A00CDBBE5 /* CSVReaderCore */; };
 		FE6BBC0D24917AE700CDBBE5 /* FileSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BBC0C24917AE700CDBBE5 /* FileSelectionViewModel.swift */; };
 		FE6BBC0F24917B0D00CDBBE5 /* ContentDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BBC0E24917B0D00CDBBE5 /* ContentDisplayView.swift */; };
@@ -19,6 +17,10 @@
 		FE6BBC1324917B1C00CDBBE5 /* ContentDisplayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BBC1224917B1C00CDBBE5 /* ContentDisplayViewModel.swift */; };
 		FE7A23C12496AE90006D9817 /* ContentDisplayViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A23C02496AE90006D9817 /* ContentDisplayViewModelTests.swift */; };
 		FE7A23C42496B56E006D9817 /* MockCSVFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A23C32496B56E006D9817 /* MockCSVFileReader.swift */; };
+		FE7A23C62496BDEA006D9817 /* FileSelectionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A23C52496BDEA006D9817 /* FileSelectionBuilder.swift */; };
+		FE7A23C82496BF92006D9817 /* ContentDisplayBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A23C72496BF92006D9817 /* ContentDisplayBuilder.swift */; };
+		FE7A23CA2496C2B4006D9817 /* MockContentDisplayBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A23C92496C2B4006D9817 /* MockContentDisplayBuilder.swift */; };
+		FE7A23CF2496C73D006D9817 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A23CE2496C73D006D9817 /* SplashView.swift */; };
 		FE98DE0A249674820030598D /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98DE09249674820030598D /* UIColor+Palette.swift */; };
 		FE98DE0B249681C80030598D /* Localizable.csv in Resources */ = {isa = PBXBuildFile; fileRef = FED9A1152495051700CB22AD /* Localizable.csv */; };
 		FE98DE0C249681C80030598D /* Teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = FED53AF82492E11D00447A5A /* Teams.csv */; };
@@ -50,27 +52,16 @@
 			remoteGlobalIDString = FE6BBB862491608600CDBBE5;
 			remoteInfo = CSVReader;
 		};
-		FE6BBBA92491608700CDBBE5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FE6BBB7F2491608600CDBBE5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FE6BBB862491608600CDBBE5;
-			remoteInfo = CSVReader;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FE6BBB872491608600CDBBE5 /* CSVReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSVReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6BBB8A2491608600CDBBE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE6BBB8C2491608600CDBBE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FE6BBB932491608700CDBBE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE6BBB962491608700CDBBE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE6BBB982491608700CDBBE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE6BBB9D2491608700CDBBE5 /* CSVReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSVReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6BBBA32491608700CDBBE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE6BBBA82491608700CDBBE5 /* CSVReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSVReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE6BBBAC2491608700CDBBE5 /* CSVReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVReaderUITests.swift; sourceTree = "<group>"; };
-		FE6BBBAE2491608700CDBBE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE6BBBBA249160E300CDBBE5 /* CSVReaderCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CSVReaderCore; path = ../Packages/CSVReaderCore; sourceTree = SOURCE_ROOT; };
 		FE6BBC0C24917AE700CDBBE5 /* FileSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectionViewModel.swift; sourceTree = "<group>"; };
 		FE6BBC0E24917B0D00CDBBE5 /* ContentDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDisplayView.swift; sourceTree = "<group>"; };
@@ -78,6 +69,10 @@
 		FE6BBC1224917B1C00CDBBE5 /* ContentDisplayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDisplayViewModel.swift; sourceTree = "<group>"; };
 		FE7A23C02496AE90006D9817 /* ContentDisplayViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDisplayViewModelTests.swift; sourceTree = "<group>"; };
 		FE7A23C32496B56E006D9817 /* MockCSVFileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCSVFileReader.swift; sourceTree = "<group>"; };
+		FE7A23C52496BDEA006D9817 /* FileSelectionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectionBuilder.swift; sourceTree = "<group>"; };
+		FE7A23C72496BF92006D9817 /* ContentDisplayBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDisplayBuilder.swift; sourceTree = "<group>"; };
+		FE7A23C92496C2B4006D9817 /* MockContentDisplayBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockContentDisplayBuilder.swift; sourceTree = "<group>"; };
+		FE7A23CE2496C73D006D9817 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		FE98DE09249674820030598D /* UIColor+Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
 		FE98DE15249696E40030598D /* CSVReaderTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CSVReaderTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		FE98DE16249696E40030598D /* FileSelectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectionViewModelTests.swift; sourceTree = "<group>"; };
@@ -123,13 +118,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE6BBBA52491608700CDBBE5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -147,7 +135,6 @@
 				FE6BBBE02491708400CDBBE5 /* Packages */,
 				FE6BBB892491608600CDBBE5 /* CSVReader */,
 				FE6BBBA02491608700CDBBE5 /* CSVReaderTests */,
-				FE6BBBAB2491608700CDBBE5 /* CSVReaderUITests */,
 				FE6BBB882491608600CDBBE5 /* Products */,
 				FE6BBBBB2491613A00CDBBE5 /* Frameworks */,
 			);
@@ -158,7 +145,6 @@
 			children = (
 				FE6BBB872491608600CDBBE5 /* CSVReader.app */,
 				FE6BBB9D2491608700CDBBE5 /* CSVReaderTests.xctest */,
-				FE6BBBA82491608700CDBBE5 /* CSVReaderUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,15 +170,6 @@
 				FE98DE15249696E40030598D /* CSVReaderTests-Bridging-Header.h */,
 			);
 			path = CSVReaderTests;
-			sourceTree = "<group>";
-		};
-		FE6BBBAB2491608700CDBBE5 /* CSVReaderUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FE6BBBAC2491608700CDBBE5 /* CSVReaderUITests.swift */,
-				FE6BBBAE2491608700CDBBE5 /* Info.plist */,
-			);
-			path = CSVReaderUITests;
 			sourceTree = "<group>";
 		};
 		FE6BBBBB2491613A00CDBBE5 /* Frameworks */ = {
@@ -235,7 +212,6 @@
 			children = (
 				FE6BBB952491608700CDBBE5 /* LaunchScreen.storyboard */,
 				FE6BBB8A2491608600CDBBE5 /* AppDelegate.swift */,
-				FE6BBB8C2491608600CDBBE5 /* SceneDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -243,6 +219,7 @@
 		FE6BBC022491717B00CDBBE5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				FE7A23CD2496C6A1006D9817 /* Splash */,
 				FE6BBC0924917AC100CDBBE5 /* ContentDisplay */,
 				FE6BBC0824917ABA00CDBBE5 /* FileSelection */,
 			);
@@ -257,6 +234,7 @@
 				FED53B0E249420CF00447A5A /* FileSelectionView.swift */,
 				FED53B10249420D500447A5A /* FileSelectionViewController.swift */,
 				FE6BBC0C24917AE700CDBBE5 /* FileSelectionViewModel.swift */,
+				FE7A23C52496BDEA006D9817 /* FileSelectionBuilder.swift */,
 			);
 			path = FileSelection;
 			sourceTree = "<group>";
@@ -270,6 +248,7 @@
 				FE6BBC0E24917B0D00CDBBE5 /* ContentDisplayView.swift */,
 				FE6BBC1024917B1600CDBBE5 /* ContentDisplayViewController.swift */,
 				FE6BBC1224917B1C00CDBBE5 /* ContentDisplayViewModel.swift */,
+				FE7A23C72496BF92006D9817 /* ContentDisplayBuilder.swift */,
 			);
 			path = ContentDisplay;
 			sourceTree = "<group>";
@@ -291,6 +270,14 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		FE7A23CD2496C6A1006D9817 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				FE7A23CE2496C73D006D9817 /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		FE98DE14249695A20030598D /* FileSelection */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				FE98DE1A24969C670030598D /* MockFileExplorer.swift */,
+				FE7A23C92496C2B4006D9817 /* MockContentDisplayBuilder.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -456,24 +444,6 @@
 			productReference = FE6BBB9D2491608700CDBBE5 /* CSVReaderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FE6BBBA72491608700CDBBE5 /* CSVReaderUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FE6BBBB72491608700CDBBE5 /* Build configuration list for PBXNativeTarget "CSVReaderUITests" */;
-			buildPhases = (
-				FE6BBBA42491608700CDBBE5 /* Sources */,
-				FE6BBBA52491608700CDBBE5 /* Frameworks */,
-				FE6BBBA62491608700CDBBE5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FE6BBBAA2491608700CDBBE5 /* PBXTargetDependency */,
-			);
-			name = CSVReaderUITests;
-			productName = CSVReaderUITests;
-			productReference = FE6BBBA82491608700CDBBE5 /* CSVReaderUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -490,10 +460,6 @@
 					FE6BBB9C2491608700CDBBE5 = {
 						CreatedOnToolsVersion = 11.5;
 						LastSwiftMigration = 1150;
-						TestTargetID = FE6BBB862491608600CDBBE5;
-					};
-					FE6BBBA72491608700CDBBE5 = {
-						CreatedOnToolsVersion = 11.5;
 						TestTargetID = FE6BBB862491608600CDBBE5;
 					};
 				};
@@ -517,7 +483,6 @@
 			targets = (
 				FE6BBB862491608600CDBBE5 /* CSVReader */,
 				FE6BBB9C2491608700CDBBE5 /* CSVReaderTests */,
-				FE6BBBA72491608700CDBBE5 /* CSVReaderUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -537,13 +502,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FE6BBB9B2491608700CDBBE5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE6BBBA62491608700CDBBE5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -613,8 +571,10 @@
 				FE6BBC0F24917B0D00CDBBE5 /* ContentDisplayView.swift in Sources */,
 				FE6BBC1124917B1600CDBBE5 /* ContentDisplayViewController.swift in Sources */,
 				FE6BBC1324917B1C00CDBBE5 /* ContentDisplayViewModel.swift in Sources */,
-				FE6BBB8D2491608600CDBBE5 /* SceneDelegate.swift in Sources */,
+				FE7A23CF2496C73D006D9817 /* SplashView.swift in Sources */,
+				FE7A23C62496BDEA006D9817 /* FileSelectionBuilder.swift in Sources */,
 				FEE105F7249436C300582720 /* ViewProtocol+Titleable.swift in Sources */,
+				FE7A23C82496BF92006D9817 /* ContentDisplayBuilder.swift in Sources */,
 				FE98DE0A249674820030598D /* UIColor+Palette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,15 +586,8 @@
 				FE98DE1B24969C670030598D /* MockFileExplorer.swift in Sources */,
 				FE98DE17249696E40030598D /* FileSelectionViewModelTests.swift in Sources */,
 				FE7A23C12496AE90006D9817 /* ContentDisplayViewModelTests.swift in Sources */,
+				FE7A23CA2496C2B4006D9817 /* MockContentDisplayBuilder.swift in Sources */,
 				FE7A23C42496B56E006D9817 /* MockCSVFileReader.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE6BBBA42491608700CDBBE5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FE6BBBAD2491608700CDBBE5 /* CSVReaderUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,11 +598,6 @@
 			isa = PBXTargetDependency;
 			target = FE6BBB862491608600CDBBE5 /* CSVReader */;
 			targetProxy = FE6BBB9E2491608700CDBBE5 /* PBXContainerItemProxy */;
-		};
-		FE6BBBAA2491608700CDBBE5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FE6BBB862491608600CDBBE5 /* CSVReader */;
-			targetProxy = FE6BBBA92491608700CDBBE5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -880,46 +828,6 @@
 			};
 			name = Release;
 		};
-		FE6BBBB82491608700CDBBE5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PBJAETU4UU;
-				INFOPLIST_FILE = CSVReaderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pesate.CSVReaderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CSVReader;
-			};
-			name = Debug;
-		};
-		FE6BBBB92491608700CDBBE5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PBJAETU4UU;
-				INFOPLIST_FILE = CSVReaderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pesate.CSVReaderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CSVReader;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -946,15 +854,6 @@
 			buildConfigurations = (
 				FE6BBBB52491608700CDBBE5 /* Debug */,
 				FE6BBBB62491608700CDBBE5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FE6BBBB72491608700CDBBE5 /* Build configuration list for PBXNativeTarget "CSVReaderUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FE6BBBB82491608700CDBBE5 /* Debug */,
-				FE6BBBB92491608700CDBBE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

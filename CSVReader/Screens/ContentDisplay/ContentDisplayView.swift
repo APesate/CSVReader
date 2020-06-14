@@ -27,7 +27,6 @@ final class ContentDisplayView: UIView, ErrorStateable {
 
 		let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
 		collectionView.delaysContentTouches = true
-		collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
 		collectionView.backgroundColor = .systemGroupedBackground
 
 		return collectionView

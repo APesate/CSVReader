@@ -17,12 +17,13 @@ final class ContentDisplayViewModel: ViewModelProtocol, Titleable {
 	@Published var isLoading: Bool = true
 	@Published var error: CSVReaderError?
 
+	let fileLocation: URL
+
 	@Localized private(set) var title: String = ""
 	private var fileReader: CSVFileReader<Record>
-	let fileLocation: URL
 	private var disposables: Set<AnyCancellable> = []
 
-	init(fileLocation: URL, fileReader: CSVFileReader<Record> = .init()) {
+	init(fileLocation: URL, fileReader: CSVFileReader<Record>) {
 		self.fileLocation = fileLocation
 		self.fileReader = fileReader
 		self.title = fileLocation.lastPathComponent
@@ -31,18 +32,13 @@ final class ContentDisplayViewModel: ViewModelProtocol, Titleable {
 	// MARK: Interface
 
 	func loadData() {
-		let subject = PassthroughSubject<Int, Never>()
-
 		isLoading = true
 
-		subject.sink { (progress) in
-			print("Loading progress: \(progress)")
-		}.store(in: &disposables)
-
 		fileReader
-			.read(fileAt: fileLocation, progressListener: subject)
+			.read(fileAt: fileLocation)
 			.sink(receiveCompletion: { [weak self] (completion) in
 				guard let self = self else { return }
+
 				self.isLoading = false
 				switch completion {
 					case .failure(let error):
@@ -53,6 +49,7 @@ final class ContentDisplayViewModel: ViewModelProtocol, Titleable {
 				}
 			}, receiveValue: { [weak self] (records) in
 				guard let self = self else { return }
+				
 				self.dataSource = records
 			})
 			.store(in: &disposables)

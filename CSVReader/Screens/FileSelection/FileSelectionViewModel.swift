@@ -19,11 +19,11 @@ final class FileSelectionViewModel: ViewModelProtocol, Titleable {
 
 	@Localized private(set) var title: String = "file_explorer_title"
 	private var fileExplorer: Explorer
+	private var contentDisplayBuilder: ContentDisplayBuilder
 
-	private var disposables: Set<AnyCancellable> = []
-
-	init(fileExplorer: Explorer) {
+	init(fileExplorer: Explorer, contentDisplayBuilder: ContentDisplayBuilder) {
 		self.fileExplorer = fileExplorer
+		self.contentDisplayBuilder = contentDisplayBuilder
 	}
 
 	// MARK: Interface
@@ -47,9 +47,8 @@ final class FileSelectionViewModel: ViewModelProtocol, Titleable {
 
 		do {
 			let path = try fileExplorer.path(forFile: fileName, withExtension: "csv", in: .main)
-			let destinationVM = ContentDisplayViewModel(fileLocation: path)
 
-			return ContentDisplayViewController(viewModel: destinationVM)
+			return contentDisplayBuilder.build(forFileAt: path)
 
 		} catch let error as FileExplorerError {
 			self.error = error

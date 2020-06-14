@@ -15,17 +15,20 @@ class FileSelectionViewModelTests: XCTestCase {
 
 	var sut: FileSelectionViewModel!
 	var mockFileExplorer: MockFileExplorer!
+	var mockContentDisplayBuilder: MockContentDisplayBuilder!
 	private var disposables: Set<AnyCancellable> = []
 
 	override func setUpWithError() throws {
 		try super.setUpWithError()
 		self.mockFileExplorer = MockFileExplorer()
-		self.sut = FileSelectionViewModel(fileExplorer: mockFileExplorer)
+		self.mockContentDisplayBuilder = MockContentDisplayBuilder()
+		self.sut = FileSelectionViewModel(fileExplorer: mockFileExplorer, contentDisplayBuilder: mockContentDisplayBuilder)
 	}
 
 	override func tearDownWithError() throws {
 		mockFileExplorer = nil
 		sut = nil
+		mockContentDisplayBuilder = nil
 		disposables.removeAll()
 		try super.tearDownWithError()
 	}
@@ -96,20 +99,15 @@ class FileSelectionViewModelTests: XCTestCase {
 
 	func testOpenFileAt_whenFileIsAvailable_returnsDestinationViewController() {
 		let mockFileIndex = 0
+		let expectedVC = UIViewController()
 		let expectedFilePaths = (0...5).map({ URL(fileURLWithPath: String($0)) })
 		mockFileExplorer.expectedPaths = expectedFilePaths
 		mockFileExplorer.expectedPath = expectedFilePaths.first
+		mockContentDisplayBuilder.expectedViewController = expectedVC
 
 		sut.refresh()
 		let destinationVC = sut.open(fileAt: mockFileIndex)
-		XCTAssertNotNil(destinationVC)
-
-		guard let contentDisplayVC = destinationVC as? ContentDisplayViewController else {
-			XCTFail("The destination view controller was expected to be of the type 'ContentDisplayViewController'")
-			return
-		}
-
-		XCTAssertEqual(contentDisplayVC.viewModel.fileLocation, expectedFilePaths[mockFileIndex])
+		XCTAssertEqual(expectedVC, destinationVC)
 	}
 
 }

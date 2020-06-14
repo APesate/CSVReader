@@ -9,7 +9,6 @@
 import UIKit
 import Combine
 import CommonUI
-import SwiftDI
 
 final class FileSelectionViewController: UIViewController, ViewProtocol, Titleable {
 
