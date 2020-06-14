@@ -11,7 +11,6 @@ import CSVReaderCore
 import Combine
 import CommonUI
 import UIKit.UIViewController
-import SwiftDI
 
 final class FileSelectionViewModel: ViewModelProtocol, Titleable {
 
@@ -19,15 +18,20 @@ final class FileSelectionViewModel: ViewModelProtocol, Titleable {
 	@Published var error: FileExplorerError?
 
 	@Localized private(set) var title: String = "file_explorer_title"
-	@Injected private(set) var fileExplorer: FileExplorer
+	private var fileExplorer: Explorer
 
 	private var disposables: Set<AnyCancellable> = []
+
+	init(fileExplorer: Explorer) {
+		self.fileExplorer = fileExplorer
+	}
 
 	// MARK: Interface
 
 	func refresh() {
 		do {
-			let  paths = try fileExplorer.paths(forFilesOf: "csv")
+			let paths = try fileExplorer.paths(forFilesOf: "csv", in: .main)
+			error = nil
 			dataSource = paths.map({ $0.deletingPathExtension().lastPathComponent })
 
 		} catch let error as FileExplorerError {
@@ -40,10 +44,9 @@ final class FileSelectionViewModel: ViewModelProtocol, Titleable {
 
 	func open(fileAt index: Int) -> UIViewController? {
 		let fileName = dataSource[index]
-		error = nil
 
 		do {
-			let path = try fileExplorer.path(forFile: fileName, withExtension: "csv")
+			let path = try fileExplorer.path(forFile: fileName, withExtension: "csv", in: .main)
 			let destinationVM = ContentDisplayViewModel(fileLocation: path)
 
 			return ContentDisplayViewController(viewModel: destinationVM)

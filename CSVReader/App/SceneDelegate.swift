@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import CSVReaderCore
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 		window = UIWindow(frame: UIScreen.main.bounds)
 		window?.windowScene = windowScene
-		window?.rootViewController = NavigationController(rootViewController: FileSelectionViewController())
+		window?.rootViewController = NavigationController(rootViewController: FileSelectionViewController(viewModel: .init(fileExplorer: FileExplorer())))
 		window?.makeKeyAndVisible()
 	}
 

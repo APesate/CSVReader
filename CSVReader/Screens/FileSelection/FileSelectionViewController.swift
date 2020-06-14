@@ -13,11 +13,26 @@ import SwiftDI
 
 final class FileSelectionViewController: UIViewController, ViewProtocol, Titleable {
 
-	@Injected private(set) var viewModel: FileSelectionViewModel
+	private(set) var viewModel: FileSelectionViewModel
 	
 	private var myView: FileSelectionView! { view as? FileSelectionView }
 	private var disposables: Set<AnyCancellable> = []
 	private lazy var tableViewDataSource = makeDataSource()
+
+	// MARK: Inits
+
+	init(viewModel: FileSelectionViewModel) {
+		self.viewModel = viewModel
+
+		super.init(nibName: nil, bundle: nil)
+	}
+
+	@available(*, unavailable)
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+
+	// MARK: Life Cycle
 
 	override func loadView() {
 		view = FileSelectionView()

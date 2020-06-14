@@ -10,7 +10,6 @@ import Foundation
 import Combine
 import CSVReaderCore
 import CommonUI
-import SwiftDI
 
 final class ContentDisplayViewModel: ViewModelProtocol, Titleable {
 
@@ -19,9 +18,9 @@ final class ContentDisplayViewModel: ViewModelProtocol, Titleable {
 	@Published var error: CSVReaderError?
 
 	@Localized private(set) var title: String = ""
-	@Injected private(set) var fileReader: CSVFileReader<Record>
+	private var fileReader: CSVFileReader<Record>
+	let fileLocation: URL
 	private var disposables: Set<AnyCancellable> = []
-	private let fileLocation: URL
 
 	init(fileLocation: URL, fileReader: CSVFileReader<Record> = .init()) {
 		self.fileLocation = fileLocation
@@ -37,7 +36,7 @@ final class ContentDisplayViewModel: ViewModelProtocol, Titleable {
 		isLoading = true
 
 		subject.sink { (progress) in
-			print(progress)
+			print("Loading progress: \(progress)")
 		}.store(in: &disposables)
 
 		fileReader
@@ -54,7 +53,6 @@ final class ContentDisplayViewModel: ViewModelProtocol, Titleable {
 				}
 			}, receiveValue: { [weak self] (records) in
 				guard let self = self else { return }
-				self.isLoading = false
 				self.dataSource = records
 			})
 			.store(in: &disposables)
