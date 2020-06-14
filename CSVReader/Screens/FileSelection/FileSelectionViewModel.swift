@@ -11,6 +11,7 @@ import CSVReaderCore
 import Combine
 import CommonUI
 import UIKit.UIViewController
+import SwiftDI
 
 final class FileSelectionViewModel: ViewModelProtocol, Titleable {
 
@@ -18,13 +19,9 @@ final class FileSelectionViewModel: ViewModelProtocol, Titleable {
 	@Published var error: FileExplorerError?
 
 	@Localized private(set) var title: String = "file_explorer_title"
+	@Injected private(set) var fileExplorer: FileExplorer
 
 	private var disposables: Set<AnyCancellable> = []
-	private let fileExplorer: FileExplorer
-
-	init(fileExplorer: FileExplorer = .init()) {
-		self.fileExplorer = fileExplorer
-	}
 
 	// MARK: Interface
 

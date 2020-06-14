@@ -9,10 +9,11 @@
 import UIKit
 import Combine
 import CommonUI
+import SwiftDI
 
 final class FileSelectionViewController: UIViewController, ViewProtocol, Titleable {
 
-	let viewModel: FileSelectionViewModel
+	@Injected private(set) var viewModel: FileSelectionViewModel
 	
 	private var myView: FileSelectionView! { view as? FileSelectionView }
 	private var disposables: Set<AnyCancellable> = []
@@ -20,17 +21,6 @@ final class FileSelectionViewController: UIViewController, ViewProtocol, Titleab
 
 	override func loadView() {
 		view = FileSelectionView()
-	}
-
-	init(viewModel: FileSelectionViewModel = .init()) {
-		self.viewModel = viewModel
-
-		super.init(nibName: nil, bundle: nil)
-	}
-
-	@available(*, unavailable)
-	required init?(coder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
 	}
 
 	override func viewDidLoad() {

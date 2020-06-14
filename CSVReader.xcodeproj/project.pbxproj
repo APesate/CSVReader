@@ -22,6 +22,8 @@
 		FE98DE0B249681C80030598D /* Localizable.csv in Resources */ = {isa = PBXBuildFile; fileRef = FED9A1152495051700CB22AD /* Localizable.csv */; };
 		FE98DE0C249681C80030598D /* Teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = FED53AF82492E11D00447A5A /* Teams.csv */; };
 		FE98DE0D249681C80030598D /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = FEA9CF8C2492C0F9007C1FBA /* issues.csv */; };
+		FE98DE1024968C870030598D /* SwiftDI in Frameworks */ = {isa = PBXBuildFile; productRef = FE98DE0F24968C870030598D /* SwiftDI */; };
+		FE98DE13249691430030598D /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE98DE12249691430030598D /* DependencyManager.swift */; };
 		FED53B0F249420CF00447A5A /* FileSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED53B0E249420CF00447A5A /* FileSelectionView.swift */; };
 		FED53B11249420D500447A5A /* FileSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED53B10249420D500447A5A /* FileSelectionViewController.swift */; };
 		FED53B14249421F100447A5A /* FileSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED53B13249421F100447A5A /* FileSelectionTableViewCell.swift */; };
@@ -75,6 +77,8 @@
 		FE6BBC1024917B1600CDBBE5 /* ContentDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDisplayViewController.swift; sourceTree = "<group>"; };
 		FE6BBC1224917B1C00CDBBE5 /* ContentDisplayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDisplayViewModel.swift; sourceTree = "<group>"; };
 		FE98DE09249674820030598D /* UIColor+Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
+		FE98DE0E24968BFC0030598D /* SwiftDI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SwiftDI; sourceTree = "<group>"; };
+		FE98DE12249691430030598D /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
 		FEA9CF8C2492C0F9007C1FBA /* issues.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issues.csv; sourceTree = "<group>"; };
 		FED53AF82492E11D00447A5A /* Teams.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Teams.csv; sourceTree = "<group>"; };
 		FED53B0E249420CF00447A5A /* FileSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectionView.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE98DE1024968C870030598D /* SwiftDI in Frameworks */,
 				FE6BBBBD2491613A00CDBBE5 /* CSVReaderCore in Frameworks */,
 				FEE34D512494265A00C0C45A /* CommonUI in Frameworks */,
 			);
@@ -196,6 +201,7 @@
 		FE6BBBE02491708400CDBBE5 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				FE98DE0E24968BFC0030598D /* SwiftDI */,
 				FEE34D3D249424D700C0C45A /* CommonUI */,
 				FE6BBBBA249160E300CDBBE5 /* CSVReaderCore */,
 			);
@@ -227,6 +233,7 @@
 				FE6BBB952491608700CDBBE5 /* LaunchScreen.storyboard */,
 				FE6BBB8A2491608600CDBBE5 /* AppDelegate.swift */,
 				FE6BBB8C2491608600CDBBE5 /* SceneDelegate.swift */,
+				FE98DE12249691430030598D /* DependencyManager.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -390,6 +397,7 @@
 			packageProductDependencies = (
 				FE6BBBBC2491613A00CDBBE5 /* CSVReaderCore */,
 				FEE34D502494265A00C0C45A /* CommonUI */,
+				FE98DE0F24968C870030598D /* SwiftDI */,
 			);
 			productName = CSVReader;
 			productReference = FE6BBB872491608600CDBBE5 /* CSVReader.app */;
@@ -565,6 +573,7 @@
 				FED53B0F249420CF00447A5A /* FileSelectionView.swift in Sources */,
 				FEE105FD2494417F00582720 /* ContentDisplayCollectionViewCell.swift in Sources */,
 				FED53B11249420D500447A5A /* FileSelectionViewController.swift in Sources */,
+				FE98DE13249691430030598D /* DependencyManager.swift in Sources */,
 				FEE106002494421700582720 /* ContentDisplayDesignGuidelines.swift in Sources */,
 				FE6BBC0F24917B0D00CDBBE5 /* ContentDisplayView.swift in Sources */,
 				FE6BBC1124917B1600CDBBE5 /* ContentDisplayViewController.swift in Sources */,
@@ -913,6 +922,10 @@
 		FE6BBBBC2491613A00CDBBE5 /* CSVReaderCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CSVReaderCore;
+		};
+		FE98DE0F24968C870030598D /* SwiftDI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftDI;
 		};
 		FEE34D502494265A00C0C45A /* CommonUI */ = {
 			isa = XCSwiftPackageProductDependency;
