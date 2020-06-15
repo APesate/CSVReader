@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE403E7828F56B6E00594496 /* CommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = FE403E7728F56B6E00594496 /* CommonUI */; };
 		FE6BBB8B2491608600CDBBE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6BBB8A2491608600CDBBE5 /* AppDelegate.swift */; };
 		FE6BBB942491608700CDBBE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE6BBB932491608700CDBBE5 /* Assets.xcassets */; };
 		FE6BBB972491608700CDBBE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6BBB952491608700CDBBE5 /* LaunchScreen.storyboard */; };
@@ -41,7 +42,6 @@
 		FEE105FD2494417F00582720 /* ContentDisplayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105FC2494417F00582720 /* ContentDisplayCollectionViewCell.swift */; };
 		FEE106002494421700582720 /* ContentDisplayDesignGuidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE105FF2494421700582720 /* ContentDisplayDesignGuidelines.swift */; };
 		FEE106032494472400582720 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE106022494472400582720 /* Record.swift */; };
-		FEE34D512494265A00C0C45A /* CommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = FEE34D502494265A00C0C45A /* CommonUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE403E7628F56B6800594496 /* CommonUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CommonUI; sourceTree = "<group>"; };
 		FE6BBB872491608600CDBBE5 /* CSVReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSVReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6BBB8A2491608600CDBBE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE6BBB932491608700CDBBE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,7 +63,7 @@
 		FE6BBB982491608700CDBBE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE6BBB9D2491608700CDBBE5 /* CSVReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSVReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6BBBA32491608700CDBBE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE6BBBBA249160E300CDBBE5 /* CSVReaderCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CSVReaderCore; path = ../Packages/CSVReaderCore; sourceTree = SOURCE_ROOT; };
+		FE6BBBBA249160E300CDBBE5 /* CSVReaderCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CSVReaderCore; path = Packages/CSVReaderCore; sourceTree = SOURCE_ROOT; };
 		FE6BBC0C24917AE700CDBBE5 /* FileSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelectionViewModel.swift; sourceTree = "<group>"; };
 		FE6BBC0E24917B0D00CDBBE5 /* ContentDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDisplayView.swift; sourceTree = "<group>"; };
 		FE6BBC1024917B1600CDBBE5 /* ContentDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDisplayViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +99,6 @@
 		FEE105FC2494417F00582720 /* ContentDisplayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDisplayCollectionViewCell.swift; sourceTree = "<group>"; };
 		FEE105FF2494421700582720 /* ContentDisplayDesignGuidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDisplayDesignGuidelines.swift; sourceTree = "<group>"; };
 		FEE106022494472400582720 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
-		FEE34D3D249424D700C0C45A /* CommonUI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CommonUI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE6BBBBD2491613A00CDBBE5 /* CSVReaderCore in Frameworks */,
-				FEE34D512494265A00C0C45A /* CommonUI in Frameworks */,
+				FE403E7828F56B6E00594496 /* CommonUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,11 +182,10 @@
 		FE6BBBE02491708400CDBBE5 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				FEE34D3D249424D700C0C45A /* CommonUI */,
+				FE403E7628F56B6800594496 /* CommonUI */,
 				FE6BBBBA249160E300CDBBE5 /* CSVReaderCore */,
 			);
-			name = Packages;
-			path = ../Packages;
+			path = Packages;
 			sourceTree = "<group>";
 		};
 		FE6BBBFF2491712B00CDBBE5 /* Resources */ = {
@@ -420,7 +419,7 @@
 			name = CSVReader;
 			packageProductDependencies = (
 				FE6BBBBC2491613A00CDBBE5 /* CSVReaderCore */,
-				FEE34D502494265A00C0C45A /* CommonUI */,
+				FE403E7728F56B6E00594496 /* CommonUI */,
 			);
 			productName = CSVReader;
 			productReference = FE6BBB872491608600CDBBE5 /* CSVReader.app */;
@@ -451,7 +450,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = Pesate;
 				TargetAttributes = {
 					FE6BBB862491608600CDBBE5 = {
@@ -652,6 +651,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -713,6 +713,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -861,13 +862,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FE403E7728F56B6E00594496 /* CommonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CommonUI;
+		};
 		FE6BBBBC2491613A00CDBBE5 /* CSVReaderCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CSVReaderCore;
-		};
-		FEE34D502494265A00C0C45A /* CommonUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = CommonUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
